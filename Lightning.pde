@@ -27,10 +27,10 @@ void draw(){
   endY=endY+y;
   endX=endX+x;
   
-  if(endY<150)
-    stroke(#00ff00);
-  else
-    stroke(#ff0000);
+  if(endY<150){
+    stroke(#00ff00);}
+  else{
+    stroke(#ff0000);}
   
   System.out.println(x);
   strokeWeight(2);
