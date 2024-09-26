@@ -1,61 +1,54 @@
-  int startX = 5;
-  int startY = 150;
-  int endY = 150;
-  int endX = 5;
-  int day = 1;
-void setup(){
-  
-  size(300,300);
-  background(#FFFFFF);
+let startX = 5;
+let startY = 150;
+let endY = 150;
+let endX = 5;
+let day = 1;
+
+function setup() {
+  createCanvas(300, 300);
+  background(255);
   frameRate(4);
   strokeWeight(6);
   stroke(0);
-  line(0,0,0,300);
-  line(0,299,300,299);
+  line(0, 0, 0, 300);
+  line(0, 299, 300, 299);
   textSize(28);
   fill(0);
-  text("Day " + day, 20, 40); 
-  
+  text("Day " + day, 20, 40);
 }
 
-void draw(){
-  double randX = Math.random()*10;
-  double randY = (Math.random()*20)-10;
-  int x = (int)randX;
-  int y = (int)randY;
+function draw() {
+  let randX = Math.random() * 10;
+  let randY = (Math.random() * 20) - 10;
   
-  endY=endY+y;
-  endX=endX+x;
-  
-  if(endY<150){
-    stroke(#00ff00);}
-  else{
-    stroke(#ff0000);}
-  
-  System.out.println(x);
-  strokeWeight(2);
-  line(startX,startY,endX,endY);
+  endY += randY;
+  endX += randX;
+
+  stroke(endY < 150 ? color(0, 255, 0) : color(255, 0, 0));
+
+  line(startX, startY, endX, endY);
   
   startX = endX;
   startY = endY;
-  if(endX>300){
+
+  if (endX > 300) {
     mousePressed();
   }
 }
 
-void mousePressed()
-{
+function mousePressed() {
   startX = 5;
   startY = 150;
   endY = 150;
   endX = 5;
-  day = day+1;
-  background(#ffffff);
+  day++;
+
+  background(255);
   strokeWeight(6);
   stroke(0);
-  line(0,0,0,300);
-  line(0,299,300,299);
+  line(0, 0, 0, 300);
+  line(0, 299, 300, 299);
   textSize(28);
   fill(0);
-  text("Day " + day, 20, 40); 
+  text("Day " + day, 20, 40);
 }
