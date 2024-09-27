@@ -1,4 +1,4 @@
-  int startX = 150;
+  int startX = 5;
   int startY = 150;
   int endY = 150;
   int endX = 5;
@@ -27,10 +27,10 @@ void draw(){
   endY=endY+y;
   endX=endX+x;
   
-  if(endY<150){
-    stroke(#00ff00);}
-  else{
-    stroke(#ff0000);}
+  if(endY<150)
+    stroke(#00ff00);
+  else
+    stroke(#ff0000);
   
   strokeWeight(2);
   line(startX,startY,endX,endY);
@@ -42,7 +42,8 @@ void draw(){
   }
 }
 
-void mousePressed(){
+void mousePressed()
+{
   startX = 5;
   startY = 150;
   endY = 150;
