@@ -1,4 +1,5 @@
-int startY = 150;
+  int startX = 150;
+  int startY = 150;
   int endY = 150;
   int endX = 5;
   int day = 1;
