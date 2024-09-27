@@ -43,8 +43,7 @@ void draw(){
   }
 }
 
-void mousePressed()
-{
+void mousePressed(){
   startX = 5;
   startY = 150;
   endY = 150;
