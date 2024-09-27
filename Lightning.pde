@@ -32,7 +32,6 @@ void draw(){
   else{
     stroke(#ff0000);}
   
-  System.out.println(x);
   strokeWeight(2);
   line(startX,startY,endX,endY);
   
